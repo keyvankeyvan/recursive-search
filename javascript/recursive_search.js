@@ -1,6 +1,25 @@
 function recursiveSearch(arr, target) {
-  // type your code here
+  if(arr[0] === target){
+    return true
+  } else if (arr[0] == undefined){
+    return false
+  } else {
+    arr.splice(0,1)
+    return(recursiveSearch(arr,target))
+  }
+
 }
+
+// function iterativeSearch(arr, target) {
+//   for (const value of arr) {
+//     if (value === target) {
+//       return true;
+//     }
+//   }
+
+//   return false;
+// }
+
 
 if (require.main === module) {
   // add your own tests in here
